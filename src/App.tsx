@@ -9,7 +9,7 @@ export default function App() {
   const [userProfiles, setUserProfiles] = useState<Array<UserProfile>>([]);
   const onClickFetchUser = () => {
     axios
-      .get<Array<User>>("http://jsonplaceholder.typicode.com/users")
+      .get<Array<User>>("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         const data = res.data.map((user) => ({
           id: user.id,
